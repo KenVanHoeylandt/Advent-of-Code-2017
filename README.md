@@ -1,4 +1,4 @@
-# Advent of Code Kotlin Bootstrap
+# Advent of Code 2017
 
 ## Introduction
 
