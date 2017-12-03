@@ -5,10 +5,39 @@ import aoc.Solution
 class Day1Solution : Solution(1) {
 
     override fun solvePartOne(input: String): String {
-        return "solution for part 1"
+        var sum = 0
+        val lastIndex = input.length - 1
+
+        for (i in 0..lastIndex) {
+            val followingIndex = (i + 1) % input.length
+
+            val firstNumber = input[i].toString().toInt()
+            val secondNumber = input[followingIndex].toString().toInt()
+
+            if (firstNumber == secondNumber) {
+                sum += firstNumber
+            }
+        }
+
+        return sum.toString()
     }
 
     override fun solvePartTwo(input: String): String {
-        return "solution for part 2"
+        var sum = 0
+        val lastIndex = input.length - 1
+        val halfListSize = input.length / 2
+
+        for (i in 0..lastIndex) {
+            val followingIndex = (i + halfListSize) % input.length
+
+            val firstNumber = input[i].toString().toInt()
+            val secondNumber = input[followingIndex].toString().toInt()
+
+            if (firstNumber == secondNumber) {
+                sum += firstNumber
+            }
+        }
+
+        return sum.toString()
     }
 }
