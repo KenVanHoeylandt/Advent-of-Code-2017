@@ -8,7 +8,7 @@ class Day1Solution : Solution(1) {
         var sum = 0
         val lastIndex = input.length - 1
 
-        for (i in 0..lastIndex) {
+        (0..lastIndex).forEach { i ->
             val followingIndex = (i + 1) % input.length
 
             val firstNumber = input[i].toString().toInt()
@@ -27,7 +27,7 @@ class Day1Solution : Solution(1) {
         val lastIndex = input.length - 1
         val halfListSize = input.length / 2
 
-        for (i in 0..lastIndex) {
+        (0..lastIndex).forEach { i ->
             val followingIndex = (i + halfListSize) % input.length
 
             val firstNumber = input[i].toString().toInt()
